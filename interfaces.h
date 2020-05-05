@@ -27,6 +27,6 @@ public:
     virtual std::shared_ptr<MethodUnit> GetMethodUnit(std::string name, std::string returnType, unsigned int flags) = 0;
 };
 
-typedef std::vector<std::shared_ptr<Unit> UnitVector ;
+typedef std::vector<std::shared_ptr<Unit>> UnitVector;
 
 #endif // INTERFACES_H

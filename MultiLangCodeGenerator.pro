@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         Utilities/writers.cpp \
+        codefactory.cpp \
         main.cpp
 
 # Default rules for deployment.
@@ -26,4 +27,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     Utilities/tools.h \
     Utilities/writers.h \
+    codefactory.h \
     interfaces.h
