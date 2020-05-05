@@ -53,6 +53,6 @@ std::vector<std::string> CppMethodUnit::Compile(unsigned int level)
     }
     result.push_back("}\n");
     for(auto& str: result)
-        str = std::string(level * 4, ' ') + str;
+        str = "    " + str;
     return result;
 }
