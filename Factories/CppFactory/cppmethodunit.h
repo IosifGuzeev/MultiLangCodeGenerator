@@ -2,7 +2,7 @@
 #define CPPMETHODUNIT_H
 #include <Interfaces.h>
 #include <map>
-
+#include <exception>
 class CppMethodUnit : public MethodUnit
 {
     using UnitVector = std::vector<std::shared_ptr<Unit>>;

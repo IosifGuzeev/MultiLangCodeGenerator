@@ -55,6 +55,7 @@ std::vector<std::string> CppClassUnit::Compile(unsigned int level)
     }
     result.push_back("};\n");
     for(auto& str: result)
-        str = "    " + str;
+        if(level > 0)
+            str = "    " + str;
     return result;
 }

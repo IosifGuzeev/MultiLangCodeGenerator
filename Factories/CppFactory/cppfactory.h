@@ -4,7 +4,7 @@
 #include<Factories/CppFactory/cppclassunit.h>
 #include<Factories/CppFactory/cppmethodunit.h>
 
-class CppFactory:AbstractFactory
+class CppFactory: public AbstractFactory
 {
 public:
     CppFactory(){};

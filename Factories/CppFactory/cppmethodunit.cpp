@@ -27,7 +27,7 @@ CppMethodUnit::CppMethodUnit(std::string name, std::string resultType, Flags fla
     }
     default:
     {
-        std::runtime_error("flag not found!");
+        throw std::runtime_error("flag not found!");
     }
     }
 }
@@ -53,6 +53,7 @@ std::vector<std::string> CppMethodUnit::Compile(unsigned int level)
     }
     result.push_back("}\n");
     for(auto& str: result)
-        str = "    " + str;
+        if(level > 0)
+            str = "    " + str;
     return result;
 }
