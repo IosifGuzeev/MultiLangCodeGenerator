@@ -13,7 +13,7 @@ public:
     virtual ~Unit() = default;
 
     virtual void addSubUnit(const std::shared_ptr<Unit>& subUnit, Flags) = 0;
-    virtual std::string Compile(unsigned int level = 0) = 0;
+    virtual std::vector<std::string> Compile(unsigned int level = 0) = 0;
 };
 
 class ClassUnit : public Unit {};
