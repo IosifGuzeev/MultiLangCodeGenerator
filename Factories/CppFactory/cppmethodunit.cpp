@@ -32,9 +32,9 @@ CppMethodUnit::CppMethodUnit(std::string name, std::string resultType, Flags fla
     }
 }
 
-void CppMethodUnit::addSubUnit(const std::shared_ptr<Unit> &subUnit, Unit::Flags accessType)
+void CppMethodUnit::addSubUnit(const std::shared_ptr<Unit> &subUnit, Unit::Flags accessType = 0)
 {
-    std::runtime_error("This function not defined yet!");
+    subUnits.push_back(subUnit);
 }
 
 std::vector<std::string> CppMethodUnit::Compile(unsigned int level)
@@ -42,14 +42,10 @@ std::vector<std::string> CppMethodUnit::Compile(unsigned int level)
     std::vector<std::string> result;
     result.push_back(modificator + resultType + " " + name + "()\n");
     result.push_back("{\n");
-    for (auto &unitsVec: subUnits)
+    for (auto &e: subUnits)
     {
-        result.push_back(unitsVec.first + "\n");
-        for(auto &e: unitsVec.second)
-        {
-            auto new_strings = e->Compile(level + 1);
-            result.insert(result.end(), new_strings.begin(), new_strings.end());
-        }
+        auto new_strings = e->Compile(level + 1);
+        result.insert(result.end(), new_strings.begin(), new_strings.end());
     }
     result.push_back("}\n");
     for(auto& str: result)

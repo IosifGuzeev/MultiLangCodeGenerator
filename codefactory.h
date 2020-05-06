@@ -7,9 +7,19 @@
 class CodeFactory
 {
     using ClassPtr = std::shared_ptr<ClassUnit>;
+    using MethodPtr = std::shared_ptr<MethodUnit>;
+
+    struct MethodInfo
+    {
+        std::string name;
+        MethodPtr ptr;
+    };
+
     AbstractFactory *factory;
     Writer *writer;
+
     std::map<std::string, ClassPtr> classes;
+    std::map<ClassPtr, std::vector<MethodInfo>> classMethods;
 
 public:
     enum Languages{
@@ -22,6 +32,7 @@ public:
     ~CodeFactory();
     void AddClassUnit(std::string name, unsigned int flags = 0);
     void AddMethodUnit(std::string className, Unit::Flags accessType, std::string name, std::string returnType, Unit::Flags flags);
+    void AddPrintComand(std::string className, std::string methodName);
     void Compile();
 };
 

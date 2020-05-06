@@ -10,7 +10,7 @@ class CppMethodUnit : public MethodUnit
     std::string name;
     std::string resultType;
     std::string modificator;
-    std::map<std::string, UnitVector> subUnits;
+    UnitVector subUnits;
 
 public:
 

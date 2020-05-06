@@ -9,3 +9,8 @@ std::shared_ptr<MethodUnit> CppFactory::GetMethodUnit(std::string name, std::str
 {
     return std::shared_ptr<CppMethodUnit>(new CppMethodUnit(name, returnType));
 }
+
+std::shared_ptr<Unit> CppFactory::GetPrintComand()
+{
+    return std::shared_ptr<CppPrintCommand>(new CppPrintCommand());
+}

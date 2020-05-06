@@ -19,6 +19,7 @@ SOURCES += \
         Factories/CppFactory/cppfactory.cpp \
         Factories/CppFactory/cppmethodunit.cpp \
         Factories/CppFactory/cppprintcommand.cpp \
+        Tests/cpptest.cpp \
         Utilities/writers.cpp \
         codefactory.cpp \
         main.cpp
@@ -33,7 +34,11 @@ HEADERS += \
     Factories/CppFactory/cppfactory.h \
     Factories/CppFactory/cppmethodunit.h \
     Factories/CppFactory/cppprintcommand.h \
+    Tests/cpptest.h \
     Utilities/tools.h \
     Utilities/writers.h \
     codefactory.h \
     interfaces.h
+
+DISTFILES += \
+    Tests/CppCases/case1.txt
