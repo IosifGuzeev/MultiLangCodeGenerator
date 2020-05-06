@@ -13,3 +13,13 @@ void FileWriter::write(std::string msg)
     myfile << msg + "\n";
     myfile.close();
 }
+
+void VectorWriter::write(std::string msg)
+{
+    output.push_back(msg);
+}
+
+std::vector<std::string> VectorWriter::GetOutput()
+{
+    return output;
+}
