@@ -40,14 +40,14 @@ void CppMethodUnit::addSubUnit(const std::shared_ptr<Unit> &subUnit, Unit::Flags
 std::vector<std::string> CppMethodUnit::Compile(unsigned int level)
 {
     std::vector<std::string> result;
-    result.push_back(modificator + resultType + " " + name + "()\n");
-    result.push_back("{\n");
+    result.push_back(modificator + resultType + " " + name + "()");
+    result.push_back("{");
     for (auto &e: subUnits)
     {
         auto new_strings = e->Compile(level + 1);
         result.insert(result.end(), new_strings.begin(), new_strings.end());
     }
-    result.push_back("}\n");
+    result.push_back("}");
     for(auto& str: result)
         if(level > 0)
             str = "    " + str;

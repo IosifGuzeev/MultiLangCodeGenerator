@@ -39,13 +39,13 @@ void CppClassUnit::addSubUnit(const std::shared_ptr<Unit> &subUnit, Flags access
 std::vector<std::string> CppClassUnit::Compile(unsigned int level)
 {
     std::vector<std::string> result;
-    result.push_back("class " + name + "\n");
-    result.push_back("{\n");
+    result.push_back("class " + name);
+    result.push_back("{");
     for (auto &unitsVec: subUnits)
     {
         if(unitsVec.second.size() > 0)
         {
-            result.push_back(unitsVec.first + ":\n");
+            result.push_back(unitsVec.first + ":");
             for(auto &e: unitsVec.second)
             {
                 auto new_strings = e->Compile(level + 1);
@@ -53,7 +53,7 @@ std::vector<std::string> CppClassUnit::Compile(unsigned int level)
             }
         }
     }
-    result.push_back("};\n");
+    result.push_back("};");
     for(auto& str: result)
         if(level > 0)
             str = "    " + str;
