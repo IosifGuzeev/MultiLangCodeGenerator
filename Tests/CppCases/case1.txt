@@ -1,0 +1,12 @@
+class A
+{
+private:
+    void b()
+    {
+    }
+protected:
+    int a()
+    {
+        std::cout << "Hello world!" << std::endl;
+    }
+};

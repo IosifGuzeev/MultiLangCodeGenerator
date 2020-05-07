@@ -9,7 +9,8 @@
 class Writer
 {
 public:
-     virtual void write(std::string msg) = 0;
+    virtual void write(std::string msg) = 0;
+    virtual ~Writer() = default;
 };
 
 class ConsoleWriter : public Writer

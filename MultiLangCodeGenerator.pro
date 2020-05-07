@@ -20,6 +20,7 @@ SOURCES += \
         Factories/CppFactory/cppmethodunit.cpp \
         Factories/CppFactory/cppprintcommand.cpp \
         Tests/cpptest.cpp \
+        Utilities/tools.cpp \
         Utilities/writers.cpp \
         codefactory.cpp \
         main.cpp
