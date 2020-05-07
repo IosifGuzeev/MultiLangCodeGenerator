@@ -29,7 +29,7 @@ void CppClassUnit::addSubUnit(const std::shared_ptr<Unit> &subUnit, Flags access
     }
     default:
     {
-        std::runtime_error("Wrong access type!");
+        throw std::runtime_error("Wrong access type!");
         break;
     }
     }

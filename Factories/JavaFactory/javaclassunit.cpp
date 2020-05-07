@@ -30,7 +30,7 @@ void JavaClassUnit::addSubUnit(const std::shared_ptr<Unit> &subUnit, Flags acces
     }
     default:
     {
-        std::runtime_error("Wrong access type!");
+        throw std::runtime_error("Wrong access type!");
         break;
     }
     }

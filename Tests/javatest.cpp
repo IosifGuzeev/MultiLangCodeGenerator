@@ -1,27 +1,25 @@
-#include "cpptest.h"
+#include "javatest.h"
 
-const std::vector<std::string> CppTest::output_true_1 ={
-    "class A",
-    "{",
-    "private:",
-    "    void b()",
-    "    {",
-    "    }",
-    "protected:",
-    "    int a()",
-    "    {",
-    "        std::cout << \"Hello world!\" << std::endl;",
-    "    }",
-    "};"
+const std::vector<std::string> JavaTest::output_true_1 ={
+                    "class A",
+                    "{",
+                    "    private int a()",
+                    "    {",
+                    "        System.out.println(\"Hello World!\");",
+                    "    }",
+                    "    protected void b()",
+                    "    {",
+                    "    }",
+                    "};"
 };
 
-std::pair<bool, std::vector<std::string>> CppTest::runTestCase1()
+std::pair<bool, std::vector<std::string>> JavaTest::runTestCase1()
 {
     auto logger = new VectorWriter();
-    auto factory = CodeFactory(CodeFactory::cpp, logger);
+    auto factory = CodeFactory(CodeFactory::java, logger);
     factory.AddClassUnit("A", 0);
-    factory.AddMethodUnit("A", 2, "a", "int", 2);
-    factory.AddMethodUnit("A", 1, "b", "void", 1);
+    factory.AddMethodUnit("A", 1, "a", "int", 2);
+    factory.AddMethodUnit("A", 2, "b", "void", 1);
     factory.AddPrintComand("A", "a");
     factory.Compile();
 
@@ -57,9 +55,9 @@ std::pair<bool, std::vector<std::string>> CppTest::runTestCase1()
     return result;
 }
 
-void CppTest::RunTests(Writer* output_logger)
+void JavaTest::RunTests(Writer* output_logger)
 {
-    output_logger->write("Running tests for cpp language...");
+    output_logger->write("Running tests for java langauge...");
     output_logger->write("");
     output_logger->write("Test case 1:");
     auto test_result = runTestCase1();
