@@ -19,6 +19,10 @@ SOURCES += \
         Factories/CppFactory/cppfactory.cpp \
         Factories/CppFactory/cppmethodunit.cpp \
         Factories/CppFactory/cppprintcommand.cpp \
+        Factories/JavaFactory/javaclassunit.cpp \
+        Factories/JavaFactory/javafactory.cpp \
+        Factories/JavaFactory/javamethodunit.cpp \
+        Factories/JavaFactory/javaprintcommand.cpp \
         Tests/cpptest.cpp \
         Utilities/tools.cpp \
         Utilities/writers.cpp \
@@ -35,6 +39,10 @@ HEADERS += \
     Factories/CppFactory/cppfactory.h \
     Factories/CppFactory/cppmethodunit.h \
     Factories/CppFactory/cppprintcommand.h \
+    Factories/JavaFactory/javaclassunit.h \
+    Factories/JavaFactory/javafactory.h \
+    Factories/JavaFactory/javamethodunit.h \
+    Factories/JavaFactory/javaprintcommand.h \
     Tests/cpptest.h \
     Utilities/tools.h \
     Utilities/writers.h \

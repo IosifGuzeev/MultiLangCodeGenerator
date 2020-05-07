@@ -12,7 +12,7 @@ void CppPrintCommand::addSubUnit(const std::shared_ptr<Unit> &subUnit, Unit::Fla
 
 std::vector<std::string> CppPrintCommand::Compile(unsigned int level)
 {
-    std::string comand = "std::cout << \"Hello world!\" << std::endl;";
+    std::string comand = "System.out.println(\"Hello World!\");";
     if(level > 0)
     {
         comand = "    " + comand;
