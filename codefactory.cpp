@@ -8,6 +8,11 @@ CodeFactory::CodeFactory(Languages langauge, Writer *_writer)
         factory = new CppFactory();
         break;
     }
+    case CodeFactory::java:
+    {
+        factory = new JavaFactory();
+        break;
+    }
     default:
     {
         throw std::runtime_error("Wrong language id!");
@@ -18,16 +23,20 @@ CodeFactory::CodeFactory(Languages langauge, Writer *_writer)
     if(_writer == nullptr)
     {
         writer = new ConsoleWriter();
+        IsOwnWriter = true;
     }
     else
     {
         writer = _writer;
+        IsOwnWriter = false;
     }
 }
 
 CodeFactory::~CodeFactory()
 {
     delete factory;
+    if(IsOwnWriter)
+        delete writer;
 }
 
 void CodeFactory::AddClassUnit(std::string name, unsigned int flags)

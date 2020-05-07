@@ -3,6 +3,8 @@
 #include <Interfaces.h>
 #include <Utilities/writers.h>
 #include <Factories/CppFactory/cppfactory.h>
+#include <Factories/JavaFactory/javafactory.h>
+
 
 class CodeFactory
 {
@@ -17,6 +19,7 @@ class CodeFactory
 
     AbstractFactory *factory;
     Writer *writer;
+    bool IsOwnWriter;
 
     std::map<std::string, ClassPtr> classes;
     std::map<ClassPtr, std::vector<MethodInfo>> classMethods;

@@ -1,6 +1,9 @@
 #ifndef JAVAFACTORY_H
 #define JAVAFACTORY_H
 #include<Interfaces.h>
+#include<Factories/JavaFactory/javaclassunit.h>
+#include<Factories/JavaFactory/javamethodunit.h>
+#include<Factories/JavaFactory/javaprintcommand.h>
 
 
 class JavaFactory: public AbstractFactory

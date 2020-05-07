@@ -1,7 +1,6 @@
 #include "javaprintcommand.h"
 
-
-JavaPrintCommand::CppPrintCommand()
+JavaPrintCommand::JavaPrintCommand()
 {
 
 }
@@ -13,7 +12,7 @@ void JavaPrintCommand::addSubUnit(const std::shared_ptr<Unit> &subUnit, Unit::Fl
 
 std::vector<std::string> JavaPrintCommand::Compile(unsigned int level)
 {
-    std::string comand = "std::cout << \"Hello world!\" << std::endl;";
+    std::string comand = "System.out.println(\"Hello World!\");";
     if(level > 0)
     {
         comand = "    " + comand;

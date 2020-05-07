@@ -3,10 +3,10 @@
 #include <Interfaces.h>
 #include <vector>
 
-class CppPrintCommand: public Unit
+class JavaPrintCommand: public Unit
 {
 public:
-    CppPrintCommand();
+    JavaPrintCommand();
 
     // Unit interface
 public:
