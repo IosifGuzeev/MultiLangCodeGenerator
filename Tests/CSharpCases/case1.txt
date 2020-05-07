@@ -1,0 +1,10 @@
+class A
+{
+    private int a()
+    {
+        Console.WriteLine("Hello world!");
+    }
+    protected void b()
+    {
+    }
+};

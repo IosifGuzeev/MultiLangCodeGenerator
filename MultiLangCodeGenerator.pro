@@ -28,6 +28,7 @@ SOURCES += \
         Factories/JavaFactory/javamethodunit.cpp \
         Factories/JavaFactory/javaprintcommand.cpp \
         Tests/cpptest.cpp \
+        Tests/csharptest.cpp \
         Tests/javatest.cpp \
         Utilities/tools.cpp \
         Utilities/writers.cpp \
@@ -53,6 +54,7 @@ HEADERS += \
     Factories/JavaFactory/javamethodunit.h \
     Factories/JavaFactory/javaprintcommand.h \
     Tests/cpptest.h \
+    Tests/csharptest.h \
     Tests/javatest.h \
     Utilities/tools.h \
     Utilities/writers.h \
@@ -60,5 +62,6 @@ HEADERS += \
     interfaces.h
 
 DISTFILES += \
+    Tests/CSharpCases/case1.txt \
     Tests/CppCases/case1.txt \
     Tests/JavaCases/case1.txt
