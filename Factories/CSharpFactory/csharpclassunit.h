@@ -1,9 +1,9 @@
-#ifndef JAVACLASSUNIT_H
-#define JAVACLASSUNIT_H
-#include <interfaces.h>
+#ifndef CSHARPCLASSUNIT_H
+#define CSHARPCLASSUNIT_H
+#include <Interfaces.h>
 #include <map>
 
-class JavaClassUnit : public ClassUnit
+class CSharpClassUnit : public ClassUnit
 {
     using UnitVector = std::vector<std::shared_ptr<Unit>>;
 
@@ -18,9 +18,8 @@ public:
         PROTECTED = 2,
     };
 
-    JavaClassUnit(std::string name);
+    CSharpClassUnit(std::string name);
     void addSubUnit(const std::shared_ptr<Unit>& subUnit, Flags accessType) override;
     std::vector<std::string> Compile(unsigned int level = 0) override;
 };
-
-#endif // JAVACLASSUNIT_H
+#endif // CSHARPCLASSUNIT_H

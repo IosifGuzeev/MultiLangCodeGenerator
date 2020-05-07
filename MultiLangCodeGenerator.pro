@@ -15,6 +15,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        Factories/CSharpFactory/csharpclassunit.cpp \
+        Factories/CSharpFactory/csharpfactory.cpp \
+        Factories/CSharpFactory/csharpmethodunit.cpp \
+        Factories/CSharpFactory/csharpprintcommand.cpp \
         Factories/CppFactory/cppclassunit.cpp \
         Factories/CppFactory/cppfactory.cpp \
         Factories/CppFactory/cppmethodunit.cpp \
@@ -36,6 +40,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    Factories/CSharpFactory/csharpclassunit.h \
+    Factories/CSharpFactory/csharpfactory.h \
+    Factories/CSharpFactory/csharpmethodunit.h \
+    Factories/CSharpFactory/csharpprintcommand.h \
     Factories/CppFactory/cppclassunit.h \
     Factories/CppFactory/cppfactory.h \
     Factories/CppFactory/cppmethodunit.h \

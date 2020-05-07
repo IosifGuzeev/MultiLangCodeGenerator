@@ -13,6 +13,11 @@ CodeFactory::CodeFactory(Languages langauge, Writer *_writer)
         factory = new JavaFactory();
         break;
     }
+    case CodeFactory::c_sharp:
+    {
+        factory = new CSharpFactory();
+        break;
+    }
     default:
     {
         throw std::runtime_error("Wrong language id!");
